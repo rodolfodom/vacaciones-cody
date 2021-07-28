@@ -1,38 +1,95 @@
-nav{
+:root {
+  --color-background: #eae5e2;
+  --color-blue: #39b4ca;
+  --color-green: #30bd9b;
+  --color-yellow: #fbcb00;
+  --color-highlight: #f3564b;
+  --color-tape: rgba(176, 232, 244, 0.46);
+  --color-postit-yellow: #f4df82;
+  --color-postit-green: #afd9cf;
+  --color-postit-blue: #addfe8;
+  --color-postit-rose: #f0a39d;
+  --color-black: #161616;
+  --color-gray-dark: #353535;
+  --color-gray: #818181;
+  --color-gray-light: #b3b3b3;
+  --color-white: #ffffff;
+  --font-title: "Otomanopee One", sans-serif;
+  --font-text: "Indie Flower", cursive;
+  --font-text-ctaa: "Comfortaa", cursive;
+}
+
+h1 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 1rem;
+}
+
+h6 {
+  font-family: var(--font-title);
+  color: var(--color-black);
+  font-size: 0.875rem;
+}
+
+nav {
   background-color: aliceblue;
   padding: 15px;
   display: flex;
-  gap:1em;
+  gap: 1em;
 }
 
-main{
+main {
   text-align: center;
   max-width: 960px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
-section{
+section {
   margin-top: 3rem;
 }
 
-.cursos div{
+.cursos div {
   background-color: black;
   color: white;
   max-width: 200px;
   display: inline-block;
   box-shadow: 5px 5px 10px black;
 }
-.fotos img{
+.fotos img {
   max-width: 450px;
   display: inline-block;
 }
-ul li{
+ul li {
   text-align: left;
 }
 ul li::marker {
   content: "🚀";
 }
 
-ol li{
+ol li {
   text-align: left;
 }
