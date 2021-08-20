@@ -26,10 +26,12 @@ html {
   font-size: 16px;
   width: 100vw;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html * {
   box-sizing: inherit;
+  overflow: hidden;
 }
 
 body {
@@ -80,6 +82,8 @@ h6 {
   margin: 0;
 }
 
+/***************** COMPONETS STYLES ***************************/
+
 nav {
   background-color: var(--color-yellow);
   display: flex;
@@ -87,6 +91,10 @@ nav {
   align-items: center;
   height: 4rem;
   box-shadow: 0px 1px 15px 3px var(--color-shadow-nav);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav-photo {
@@ -100,7 +108,31 @@ nav {
 }
 
 .nav-links {
-  display: none;
+  position: fixed;
+  top: 4.2rem;
+  right: 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-yellow);
+  width: 50vw;
+  box-shadow: 0px 1px 15px 3px var(--color-shadow-nav);
+  transition: all 0.5s ease-out;
+}
+
+.nav-links > a {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-highlight);
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.nav-links > a:hover {
+  cursor: pointer;
+  background-color: var(--color-highlight);
+  color: var(--color-yellow);
 }
 
 .menu-btn {
@@ -111,6 +143,10 @@ nav {
 
 .nav-header {
   font-size: 1rem;
+}
+
+header {
+  margin-top: 4rem;
 }
 
 main {
@@ -131,7 +167,7 @@ section {
   box-shadow: 5px 5px 10px black;
 }
 .fotos img {
-  max-width: 450px;
+  max-width: 250px;
   display: inline-block;
 }
 ul li {
@@ -143,4 +179,11 @@ ul li::marker {
 
 ol li {
   text-align: left;
+}
+
+/************** UTILITIES *******************/
+
+.hidden {
+  visibility: hidden;
+  transform: translateX(50vw);
 }
