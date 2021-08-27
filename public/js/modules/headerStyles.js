@@ -13,7 +13,7 @@ export default function headerStyles() {
     const colorID = Math.round(Math.random() * (colors.length - 1));
     header.style.backgroundColor = colors[colorID];
     console.log(index);
-    if (index % 2 != 0) header.style.marginLeft = "15%";
+    if (index % 2 != 0) header.style.marginLeft = "15vw";
     index = index + 1;
   });
 }

@@ -24,19 +24,16 @@
 
 html {
   font-size: 16px;
-  width: 100vw;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 html * {
   box-sizing: inherit;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
   background-color: var(--color-background);
 }
@@ -87,11 +84,12 @@ p {
   font-size: 1rem;
   font-family: var(--font-text);
   margin: 0;
+  text-align: left;
 }
 
 section {
   margin-top: 2rem;
-  padding: 0 1rem 2rem 1rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 /***************** COMPONETS STYLES ***************************/
@@ -108,6 +106,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 10;
+  width: 100vw;
 }
 
 .nav-photo {
