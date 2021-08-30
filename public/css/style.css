@@ -38,6 +38,16 @@ body {
   background-color: var(--color-background);
 }
 
+a {
+  color: var(--color-highlight);
+}
+
+footer {
+  background-color: var(--color-highlight);
+  padding: 2rem;
+  font-family: var(--font-text-ctaa);
+}
+
 h1 {
   font-family: var(--font-title);
   color: var(--color-black);
@@ -50,6 +60,7 @@ h2 {
   color: var(--color-black);
   font-size: 1.75rem;
   margin: 0;
+  text-align: left;
 }
 
 h3 {
@@ -80,6 +91,18 @@ h6 {
   margin: 0;
 }
 
+li {
+  text-align: left;
+  font-family: var(--font-text);
+}
+
+main {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
 p {
   font-size: 1rem;
   font-family: var(--font-text);
@@ -90,6 +113,16 @@ p {
 section {
   margin-top: 2rem;
   padding: 0 2rem 2rem 2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 1rem;
+}
+
+ol {
+  margin: 0;
+  padding: 1rem;
 }
 
 /***************** COMPONETS STYLES ***************************/
@@ -157,13 +190,6 @@ nav {
   font-size: 1rem;
 }
 
-main {
-  text-align: center;
-  max-width: 960px;
-  margin: 0 auto;
-  margin-top: 4rem;
-}
-
 .hero-img {
   margin-bottom: 3rem;
   background: linear-gradient(
@@ -208,7 +234,8 @@ main {
   margin: 1.5rem auto;
   max-width: 800px;
   transform: rotate(2deg);
-  padding: 2rem 2rem;
+  padding: 1.5rem;
+  padding-top: 2rem;
   text-align: left;
   background-color: var(--color-postit-yellow);
   z-index: 0;
@@ -244,27 +271,28 @@ main {
   font-weight: 700;
 }
 
-.fotos img {
-  max-width: 250px;
+.gallery {
+  background-color: var(--color-postit-rose);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.photos figure {
+  background-color: var(--color-white);
+  width: 100%;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  padding-bottom: 4rem;
   display: inline-block;
+  max-width: 400px;
 }
 
-ul {
-  margin: 0;
-  padding: 1rem;
+.photos img {
+  width: 100%;
 }
 
-ul li {
-  text-align: left;
-  font-family: var(--font-text);
-}
-
-.list-item::marker {
+ul li::marker {
   content: "🚀";
-}
-
-ol li {
-  text-align: left;
 }
 
 /************** UTILITIES *******************/
