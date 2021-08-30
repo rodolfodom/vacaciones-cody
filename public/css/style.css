@@ -43,9 +43,8 @@ a {
 }
 
 footer {
-  background-color: var(--color-highlight);
+  background-color: var(--color-blue);
   padding: 2rem;
-  font-family: var(--font-text-ctaa);
 }
 
 h1 {
@@ -233,16 +232,11 @@ nav {
 .post-it {
   margin: 1.5rem auto;
   max-width: 800px;
-  transform: rotate(2deg);
   padding: 1.5rem;
   padding-top: 2rem;
   text-align: left;
   background-color: var(--color-postit-yellow);
   z-index: 0;
-}
-
-.post-it * {
-  transform: rotate(-2deg);
 }
 
 .course-card {
@@ -269,6 +263,7 @@ nav {
 .course-card p {
   font-family: var(--font-text-ctaa);
   font-weight: 700;
+  text-align: center;
 }
 
 .gallery {
@@ -295,6 +290,9 @@ ul li::marker {
   content: "🚀";
 }
 
+.footer-text {
+  font-family: var(--font-text-ctaa);
+}
 /************** UTILITIES *******************/
 
 .hidden {

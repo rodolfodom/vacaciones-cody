@@ -1,5 +1,6 @@
 import headerStyles from "./modules/headerStyles.js";
 import toggleMenu from "./modules/menu.js";
+import rotatePhotos from "./modules/photosStyle.js";
 import postitStyles from "./modules/postitStyles.js";
 
 const D = document,
@@ -12,4 +13,5 @@ D.addEventListener("click", (e) => {
 D.addEventListener("DOMContentLoaded", (e) => {
   headerStyles();
   postitStyles();
+  rotatePhotos();
 });

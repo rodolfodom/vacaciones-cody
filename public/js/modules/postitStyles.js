@@ -9,7 +9,10 @@ const D = document,
 
 export default function postitStyles() {
   postits.forEach((postit) => {
-    const colorID = Math.round(Math.random() * (colors.length - 1));
+    const degree = Math.random() * 4 - 2,
+      colorID = Math.round(Math.random() * (colors.length - 1));
+
     postit.style.backgroundColor = `var(${colors[colorID]})`;
+    postit.style.transform = `rotate(${degree}deg)`;
   });
 }
