@@ -100,6 +100,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   margin-top: 4rem;
+  overflow-x: hidden;
 }
 
 p {
@@ -292,10 +293,81 @@ ul li::marker {
 
 .footer-text {
   font-family: var(--font-text-ctaa);
+  text-align: center;
 }
 /************** UTILITIES *******************/
 
 .hidden {
   visibility: hidden;
   transform: translateX(85vw);
+}
+
+/**************************** MEDIA QUERIES ************************/
+@media (min-width: 767px) {
+  html {
+    font-size: 22px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .nav-links {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: fit-content;
+    display: inline;
+    background-color: var(--color-yellow);
+    box-shadow: none;
+    transition: all 0.3s ease-out;
+  }
+
+  .hidden {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-links > a {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--color-black);
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .nav-links > a:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-highlight);
+  }
 }
