@@ -97,9 +97,10 @@ li {
 
 main {
   text-align: center;
-  max-width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
   margin-top: 4rem;
+  overflow-x: hidden;
 }
 
 p {
@@ -107,11 +108,13 @@ p {
   font-family: var(--font-text);
   margin: 0;
   text-align: left;
+  position: relative;
+  z-index: 10;
 }
 
 section {
   margin-top: 2rem;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 4rem 2rem;
 }
 
 ul {
@@ -137,7 +140,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 11;
   width: 100vw;
 }
 
@@ -202,12 +205,12 @@ nav {
   background-repeat: no-repeat;
   width: 100vw;
   height: calc(100vw * 0.75);
-  max-width: 900px;
-  max-height: 675px;
+  max-width: 1280px;
+  max-height: 960px;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .hero-title {
@@ -237,6 +240,33 @@ nav {
   text-align: left;
   background-color: var(--color-postit-yellow);
   z-index: 0;
+  position: relative;
+}
+
+.post-it::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--color-tape);
+  top: 0;
+  left: -2.5rem;
+  transform: rotate(-45deg) skew(15deg, 0);
+  z-index: 9;
+}
+
+.post-it::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6rem;
+  height: 1.5rem;
+  background-color: var(--color-tape);
+  top: 0;
+  right: -2.5rem;
+  transform: rotate(45deg) skew(15deg, 0);
+  z-index: 9;
 }
 
 .course-card {
@@ -272,14 +302,47 @@ nav {
   margin-bottom: 2rem;
 }
 
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .photos figure {
   background-color: var(--color-white);
   width: 100%;
-  margin: 1rem 0.5rem;
+  margin: 2rem 0.5rem;
   padding: 0.5rem;
   padding-bottom: 4rem;
   display: inline-block;
-  max-width: 400px;
+  max-width: 450px;
+}
+
+.photos figure::after,
+.prueba::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--color-tape);
+  top: 0;
+  left: -2.5rem;
+  transform: rotate(-45deg) skew(15deg, 0);
+  z-index: 9;
+}
+
+.photos figure::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--color-tape);
+  top: 0;
+  right: -2.5rem;
+  transform: rotate(45deg) skew(15deg, 0);
+  z-index: 9;
 }
 
 .photos img {
@@ -292,10 +355,108 @@ ul li::marker {
 
 .footer-text {
   font-family: var(--font-text-ctaa);
+  text-align: center;
 }
 /************** UTILITIES *******************/
 
 .hidden {
   visibility: hidden;
   transform: translateX(85vw);
+}
+
+/******************************** Gallery styles *****************************/
+
+/**************************** MEDIA QUERIES ************************/
+
+@media (min-width: 480px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 767px) {
+  html {
+    font-size: 22px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 3.8rem;
+    width: 50%;
+    margin-left: 50%;
+  }
+
+  .hero-description {
+    font-size: 1.75rem;
+    width: 50%;
+    margin-left: 50%;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .nav-links {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: fit-content;
+    display: inline;
+    background-color: var(--color-yellow);
+    box-shadow: none;
+    transition: all 0.3s ease-out;
+  }
+
+  .hidden {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-links > a {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--color-black);
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .nav-links > a:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-highlight);
+  }
 }
